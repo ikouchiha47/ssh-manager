@@ -7,7 +7,7 @@ cp sshm.py __main__.py
 echo "remove zip file from dist"
 rm dist/*
 echo "zipping files excluding .git data __pycache__"
-zip -r9 --exclude=release.sh --exclude=dist* --exclude=*__pycache__* ./dist/sshm.zip .
+zip -r9 --exclude=release.sh --exclude=.git/* --exclude=dist* --exclude=*__pycache__* ./dist/sshm.zip .
 echo "remove __main.py__ from source"
 rm __main__.py
 echo "create standalone"

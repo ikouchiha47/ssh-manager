@@ -1,5 +1,6 @@
 import ntpath
 import os
+import git
 
 class FileWriter:
     def __init__(self, filepath):

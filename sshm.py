@@ -2,7 +2,6 @@ import os
 import ntpath
 import sys
 import argparse
-import git
 from scripts.tasks import Tasks
 from scripts.writer import FileWriter
 from scripts.parser import ParseConfig
@@ -22,7 +21,7 @@ cliopts = {
     "add": [
         { "opt": "host", "type": str, "help": "provide the host ip", "required": True },
         { "opt": "alias", "type": str, "help": "provide the host, for aliasing, defaults to host", "required": False },
-        { "opt": "user", "type": str, "help": "provide ssh user", "required": False, "default": "amitava.ghosh" },
+        { "opt": "user", "type": str, "help": "provide ssh user", "required": False, "default": "" },
         { "opt": "key", "type": str, "help": "provide the private key file. defaults to ~/.ssh/id_rsa", "required": False, "default": "~/.ssh/id_rsa" },
         { "opt": "write", "type": str, "help": "writes result to specified file", "required": False, "default": argparse.SUPPRESS },
         { "opt": "jumpbox", "type": str, "help": "jumpbox config", "required": False }
